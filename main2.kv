@@ -1,0 +1,397 @@
+
+NavigationLayout:
+
+    MDNavigationDrawer:
+
+        drawer_logo: 'images.png'
+        NavigationDrawerIconButton:
+            text: 'Home'
+            font_size: '10sp'
+
+            on_release:
+                screen_manager.current = 'screen1'
+        NavigationDrawerIconButton:
+            text: 'Hymn'
+
+            on_release:
+                screen_manager.current = 'screen2'
+
+        NavigationDrawerIconButton:
+            text: 'Invocation'
+            icon: 'check'
+            on_release:
+                screen_manager.current = 'screen3'
+            on_release:
+                app.aduaUbanmu()
+
+        NavigationDrawerIconButton:
+            text: 'Call to confession'
+            font_size: '11sp'
+            icon: 'check'
+            on_release:
+                screen_manager.current = 'screen5'
+            on_release:
+                app.shedarBangaskiya()
+        NavigationDrawerIconButton:
+            text: 'General Confession'
+            icon: 'check'
+            on_release:
+                screen_manager.current = 'screen6'
+            on_release:
+                app.wakanBishara()
+        NavigationDrawerIconButton:
+            text: 'Words Of Assurance'
+            icon: 'check'
+            on_release:
+                screen_manager.current = 'screen7'
+            on_release:
+                app.adduaNemanGafara()
+
+        NavigationDrawerIconButton:
+            text: 'Our Lords Prayer'
+            icon: 'check'
+            on_release:
+                screen_manager.current = 'screen8'
+            on_release:
+                app.lordsPrayer()
+        NavigationDrawerIconButton:
+            icon: 'check'
+            text: 'Psalter'
+            on_release:
+                screen_manager.current = 'screen9'
+            on_release:
+                app.psalter()
+        NavigationDrawerIconButton:
+            text: 'Scripture Reading'
+            icon: 'check'
+            on_release:
+                screen_manager.current = 'screen10'
+            on_release:
+                app.scriptureReading()
+        NavigationDrawerIconButton:
+            icon: 'check'
+            text: 'Affirmation of faith'
+            on_release:
+                screen_manager.current = 'screen11'
+            on_release:
+                app.affirmation()
+        NavigationDrawerIconButton:
+            icon: 'check'
+            text: 'Pastoral Prayer'
+            on_release:
+                screen_manager.current = 'screen12'
+            on_release:
+                app.pastoral()
+        NavigationDrawerIconButton:
+            icon: 'check'
+            text: 'Offertory'
+            on_release:
+                screen_manager.current = 'screen13'
+            on_release:
+                app.offertory()
+        NavigationDrawerIconButton:
+            icon: 'check'
+            text: 'Hymn'
+            on_release:
+                screen_manager.current = 'screen14'
+            on_release:
+                app.hymn()
+
+        NavigationDrawerIconButton:
+            icon: 'check'
+            text: 'The Sermon'
+            on_release:
+                screen_manager.current = 'screen15'
+            on_release:
+                app.sermon()
+
+        NavigationDrawerIconButton:
+            icon: 'check'
+            text: 'Hymn'
+            on_release:
+                screen_manager.current = 'screen16'
+            on_release:
+                app.hymn()
+        NavigationDrawerIconButton:
+            icon: 'check'
+            text: 'Benediction'
+            on_release:
+                screen_manager.current = 'screen17'
+            on_release:
+                app.benediction()
+
+        NavigationDrawerIconButton:
+            icon: 'check'
+            text: 'Postlude'
+            on_release:
+                screen_manager.current = 'screen18'
+            on_release:
+                app.postlude()
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        ScreenManager:
+            id: screen_manager
+            Screen:
+
+                name: 'screen1'
+                BoxLayout:
+
+                    orientation: 'vertical'
+                    MDLabel:
+                    MDLabel:
+                        text: 'The United Methodist Church\n \nSouthern Conference'
+                        halign: 'center'
+                        font_size: '20sp'
+
+                    MDLabel:
+                        text: 'Mile Six Charge'
+                        font_size: '20sp'
+                        halign: 'center'
+
+
+                    MDFillRoundFlatIconButton:
+                        icon: 'menu'
+                        text: 'Order Of Service'
+                        on_release:
+                            app.root.toggle_nav_drawer()
+                        pos_hint: {'center_x': .5}
+
+                    MDLabel:
+                    MDFillRoundFlatIconButton:
+                        icon: 'phone'
+                        text: 'Contact Me'
+                        on_release:
+                            app.show_MDDialog()
+
+                        pos_hint: {'center_x': .5}
+
+
+                    MDLabel:
+                    MDLabel:
+                        text: 'English Version'
+                        halign: 'right'
+                        font_size: '10sp'
+
+
+
+
+            Screen:
+                name: 'screen2'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Hymn'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: 'Songs from the Hymn Book'
+                        halign: 'center'
+                        font_size: '11sp'
+
+
+            Screen:
+                name: 'screen3'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Invocation'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: 'Almighty God from whom all good prayer cometh\n \nand pourest out on all who desires it, the spirit\n \nof grace and supplication: deliver us when we draw\n \nnear thee, from coldness of hear and wandering of mind\n, \nthat with steadfast thoughts and kindled affections,\n \nwe may worship thee in spirit and in truth;\n \nthrough christ our Lord. Amen'
+                        halign: 'center'
+
+                        font_size: '11sp'
+
+
+
+            Screen:
+                name: 'screen5'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Call to confession'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: 'Dear beloved, the Scriptures move us to\n \nacknowledge and confess our sins before almighty God,\n \nour heavenly Father, with a humble, lowly, patient\n \nand obedient heart, to the end that we may obtain forgiveness\n \nby his infinite goodness and mercy. \nWherefore i pray and beseech you as many as are here present,\n \nto accompany me wih a pure heart and humble voice,\n \nunto the throne of the heavenly grace '
+                        halign: 'center'
+
+                        font_size: '11sp'
+                        font_family: 'Arial'
+
+            Screen:
+                name: 'screen6'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'General Confession'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: 'Almighty and most merciful Father,\nwe have erred and strayed from thy ways like lost sheep.\nWe have followed to much the devices and desires\n \nof our own hearts. we have offended against thy holy laws.\nWe have left undone those things which we ought to have done,\n \nand we have done those things which we ought not to have\n done. But thou , O Lord, have mercy upon us. Spare thou those, O God,\n who confess their faults. Restore thou those who are penitent,\n \naccording to thy promises declared unto mankind in\n Christ Jesus our Lord. And grant, O most merciful father,\n \nfor his sake, that we may hereafter live a godly, righteous,\n and sober life, to the glory of thy holy name. Amen'
+                        font_size: '11sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen7'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Words of assurance'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: 'O Lord, we beseech thee,\n absolve thy people from their offenses, that through\n \nthy bountiful goodness, we may be delivered from the bonds of those\n sins which by our frailty we have committed.\n Grant this, O heavenly Father, for the sake of Jesus Christ,\n \nour Lord and Savior. Amen'
+                        halign: 'center'
+                        font_size: '11sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen8'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Our Lords Prayer'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: 'Our Father, who art in heaven, hallowed be thy name.\n Thy kingdom come, thy will be done on earth as it is in heaven.\n Give us this day our daily bread and forgive us our\n trespasses as we forgive those who trespass against us.\n And lead us not into temptation but deliver us from evil.\n For thine is the kingdom, the power and the\n glory, forever and ever. Amen \n\n MINISTER: O Lord, Open our lips\n\n PEOPLE: And our mouth shall show forth thy praise\n\nMINISTER: Praise ye the Lord\n\n PEOPLE: The Lords name be praised'
+                        font_size: '11sp'
+                        halign: 'center'
+
+
+
+            Screen:
+                name: 'screen9'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Psalter'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: 'Glory be to the Father\n \nand to the Son\n \nand to the Holy Ghost;\n \nas it was from the beginning,\n \nis now and ever shall be,\n \nworld without end. Amen'
+                        font_size: '11sp'
+                        halign: 'center'
+
+
+            Screen:
+                name: 'screen10'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Scripture Reading'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: 'Reading from Old Testament and the Book of Epistles or Gospel'
+                        font_size: '11sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen11'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Affirmation Of Faith'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: "I believe in the God, the father almighty,\n maker of heaven and earth; And in Jesus Christ his only son,\n our Lord; who was conceived by the Holy Spirit,\n born of the virgin Mary, suffered under Pontius Pilate,\n was crucified, dead, and buried; the third day he rose from\n the dead; he ascended into heaven, and sitteth at the right\n hand of God the Father Almighty; from thence he shall come to\n judge the quick and the dead. I believe in the Holy Spirit,\n the holy catholic church, the communion of saints, the forgiveness\n of sins, the resurrection of the body, and life everlasting.\n Amen"
+                        font_size: '11sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen12'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Pastoral Prayer'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: ""
+                        font_size: '13sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen13'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Offertory'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: ""
+                        font_size: '13sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen14'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Hymn'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: ""
+                        font_size: '13sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen15'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'The Sermon'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: ""
+                        font_size: '13sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen16'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Hymn'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: ""
+                        font_size: '13sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen17'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Benediction'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: ""
+                        font_size: '13sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen18'
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: 'Postlude'
+                        left_action_items: [['dots-vertical', lambda x: root.toggle_nav_drawer()]]
+                    MDLabel:
+                        text: ""
+                        font_size: '13sp'
+                        halign: 'center'
+
+            Screen:
+                name: 'screen19'
+                BoxLayout:
+                    orientation: 'vertical'
+                    canvas.before:
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+                            source: 'earpiece.jpg'
+
+                    MDRoundFlatIconButton:
+                        icon: 'home'
+                        on_release:
+                            screen_manager.current = 'screen1'
+
+
