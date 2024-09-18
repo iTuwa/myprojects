@@ -8,7 +8,7 @@ from kivymd.uix.popupscreen import MDPopupScreen
 from kivymd.uix.expansionpanel import MDExpansionPanel
 from kivy.uix.boxlayout import BoxLayout
 from kivymd.uix.dialog import MDDialog
-
+print(' ')
 class Main2App(App):
     theme_cls = ThemeManager()
 
